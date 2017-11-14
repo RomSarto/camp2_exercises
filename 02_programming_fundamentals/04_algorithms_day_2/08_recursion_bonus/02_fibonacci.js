@@ -15,8 +15,18 @@
 // even several times
 
 function fibo(n) {
-  // your code here
+  if(n < 0 || !Number.isInteger(n)){
+    return null;
+  }
+  else if (n === 0) {
+    return 0;
+  }
+  else if (n === 1) {
+    return 1;
+  }
+  return fibo(n -1) + fibo(n - 2);
 }
+
 
 // do not remove this line, it is for tests
 module.exports = fibo;
