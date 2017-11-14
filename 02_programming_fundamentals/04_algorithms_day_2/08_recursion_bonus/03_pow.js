@@ -5,7 +5,15 @@
 // for instance pow(2,8) = 256
 
 function pow(number, power) {
-  // Your code here
+  if (power === 0) {
+    return 1
+  }
+
+  let temp = number
+  for (let i = 1; i < power; i = i + 1) {
+    temp = temp * number;
+  }
+  return temp
 }
 
 // do not remove this line, it is for tests
