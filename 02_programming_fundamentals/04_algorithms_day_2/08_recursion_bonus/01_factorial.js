@@ -9,7 +9,13 @@
 
 
 function fact(n) {
-  // your code here
+  if (n < 0 || !Number.isInteger(n)){
+    return null;
+  }
+  else if (n === 0) {
+    return 1;
+  }
+  return  n * fact(n-1);
 }
 
 
