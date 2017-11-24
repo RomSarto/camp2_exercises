@@ -17,3 +17,9 @@ const bonus = driverData.bonus;
 let canRentACar;
 
 // Your code here:
+const licenseOK = (driverLicense.includes("B"));
+const dateIssuedOK = (new Date().getFullYear() - licenceIssued) >= 2;
+const accidentsOK = (numberOfAccident === 0);
+const bonusOK = (bonus >= 0.7);
+
+canRentACar = licenseOK && dateIssuedOK && (accidentsOK || bonusOK);
