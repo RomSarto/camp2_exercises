@@ -9,7 +9,13 @@ const driver = {
 // * Input: a driver
 // * Output: a boolean if the driver can rent a car
 
+function canRentACar(driver) {
+  const validLicense = ["AM", "A1", "A2", "A", "B1", "B"].includes(driver.driverLicense);
+  const validDate = driver.licenseIssued <= new Date().getFullYear() - 2;
+  const validBonus = driver.numberOfAccident == 0 || driver.bonus >= 0.7
 
+  return validLicense && validDate && validBonus;
+}
 
 
 // ⚠ Do not remove me ! It's for tests
